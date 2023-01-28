@@ -18,8 +18,6 @@ public class Product {
 	private Long id;
 
 	@Column(name = "name")
-	@Email(message = "email patten is not correct")
-//	@Pattern(regexp = "\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b")
 	private String name;
 
 	@Column(name = "description")
