@@ -2,6 +2,7 @@ package com.product2.productService2.service;
 
 import com.product2.productService2.DAO.ProductRepo;
 import com.product2.productService2.model.Product;
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,6 +56,7 @@ public class ProductSericeImpl implements ProductService{
     @Override
     public ResponseEntity<?> deleteProduct(Long id) {
         try {
+
             productRepo.deleteById(id);
             return new ResponseEntity<>("the product is deleted",HttpStatus.OK);
 
